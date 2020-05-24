@@ -42,8 +42,8 @@ Purpose : Perform ping testing to a given sublink from the fetched links using s
 @param : list of all the host and return the list of filtered Hosts 
 """
 def performPingTest(host):
-    args = "ping -c 1 "+ host
-    return subprocess.run(args) == 0
+    args = "ping -c 2 "+ host
+    return subprocess.call(args,shell=True) == 0
 
 
 
