@@ -4,27 +4,33 @@ import os.path
 import subprocess
 
 
-""" 
-Purpose : Reading from a file and return the list of parsed link 
-@param fileName : name of the input file name
-"""
 def readFromFile(fileName):
-    openFile = open(fileName,"r")
-    lines = openFile.readlines()
-    
-    # making a list to add all the elements into the list 
+    # Assinging variables 
     webLinks = []
-
-    for line in lines:
-        eachLine = line.replace("<BR>","\n")
-        webLinks.append(eachLine.strip())
-        if "www" not in webLinks:
-            webLinks
     
-    # for eachLink in webLinks : print(eachLink)
-    
+    openFile = open(fileName,"r")
+    while line := openFile.readline():
+        tempList = []    
+        if "<BR>" in line: 
+            templist = line.split("<BR>")
+            webLinks.extend(templist)
+        else :
+            webLinks.append(line.strip())
+    AllCorrectedDomains  = wwwHost(webLinks)
+    for items in AllCorrectedDomains :
+        print (items)
     openFile.close
-    return webLinks
+    return AllCorrectedDomains
+
+
+def wwwHost(tempList):
+    newLinkList = []
+    eachNewLink = None
+    for eachLink in tempList:
+        if "www." not in eachLink:
+            eachNewLink = "www." + eachLink
+        newLinkList.append(eachNewLink)
+    return newLinkList
 
 
 
@@ -44,6 +50,7 @@ Purpose : Perform ping testing to a given sublink from the fetched links using s
 """
 def performPingTest(host, port = 22):
     args = "telnet "+ host + port
+    print("on Port : " +port )
     return subprocess.call(args,shell=True) == 0
 
 
@@ -52,10 +59,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     
     # adding arguments 
-    parser.add_argument("-v","--version",help= "versionNumber" ,action = "store_true")
+    parser.add_argument("-p","--port",type= int ,help= "port to perform testing")
     parser.add_argument("-i","--input", type= str, required = True, help = "Name of input text file")
     parser.add_argument("-o","--output",type = str, required = True, help ="Name of output text file")
-    parser.add_argument("-p","--port",type= int ,help= "port to perform testing")
+
 
     args  = vars(parser.parse_args())
 
