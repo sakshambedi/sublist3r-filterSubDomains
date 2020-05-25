@@ -2,7 +2,6 @@
 import argparse
 import os.path
 import subprocess
-import platform
 
 
 """ 
@@ -19,6 +18,8 @@ def readFromFile(fileName):
     for line in lines:
         eachLine = line.replace("<BR>","\n")
         webLinks.append(eachLine.strip())
+        if "www" not in webLinks:
+            webLinks
     
     # for eachLink in webLinks : print(eachLink)
     
@@ -41,11 +42,9 @@ Purpose : Perform ping testing to a given sublink from the fetched links using s
           If port not specified default = 22
 @param : list of all the host and return the list of filtered Hosts 
 """
-def performPingTest(host):
-    args = "ping -c 2 "+ host
+def performPingTest(host, port = 22):
+    args = "telnet "+ host + port
     return subprocess.call(args,shell=True) == 0
-
-
 
 
 
