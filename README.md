@@ -8,9 +8,19 @@ It does the following by :
 
 
 /***********************************************<br>
-**<i> Note : This Script only works with python3</i> **<br>
+**<i><font size = "+2"> Note : This Script only works with python3  </font></i> **<br>
 ***********************************************/
 
-<b>How to run this script : </b><br>
+<font size = "+2"><b>How to run this script : </font></b><br>
 python3 subDomainFilter.py [-i/--input] <name_of_the_input_file> [-o/--output] <name_of_the_output_file>
 
+
+<font size = "+2"><b>Python Command </font></b>
+![](images/command-short)
+
+<br><br>
+![](images/command-longer)
+
+
+<br><br>
+![](images/command-longest)
