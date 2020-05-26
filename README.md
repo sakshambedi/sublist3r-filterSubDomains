@@ -16,11 +16,11 @@ python3 subDomainFilter.py [-i/--input] <name_of_the_input_file> [-o/--output] <
 
 
 <font size = "+2"><b>Python Command </font></b>
-![](images/command-short)
+![](images/command-short.jpg)
 
 <br><br>
-![](images/command-longer)
+![](images/command-longer.jpg)
 
 
 <br><br>
-![](images/command-longest)
+![](images/command-longest.fpg)
