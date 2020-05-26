@@ -15,7 +15,9 @@ It does the following by :
 python3 subDomainFilter.py [-i/--input] <name_of_the_input_file> [-o/--output] <name_of_the_output_file>
 
 
-<font size = "+2"><b>Python Command </font></b>
+<font size = "+2"><b>Python Command :</font></b>
+<br>
+
 ![](images/command-short.jpg)
 
 <br><br>
@@ -23,4 +25,4 @@ python3 subDomainFilter.py [-i/--input] <name_of_the_input_file> [-o/--output] <
 
 
 <br><br>
-![](images/command-longest.fpg)
+![](images/command-longest.jpg)
