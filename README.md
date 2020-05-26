@@ -18,11 +18,14 @@ python3 subDomainFilter.py [-i/--input] <name_of_the_input_file> [-o/--output] <
 <font size = "+2"><b>Python Command :</font></b>
 <br>
 
-![](images/command-short.jpg)
+<i>short verbose :<i>
+![short verbose](images/command-short.jpg)
 
 <br><br>
-![](images/command-longer.jpg)
+<i>verbose containing complete arguments :<i>
+![verbose containing complete arguments](images/command-longer.jpg)
 
 
 <br><br>
-![](images/command-longest.jpg)
+<i>verbose conatining complete arguments and file dir :<i>
+![verbose conatining complete arguments and file dir](images/command-longest.jpg)
