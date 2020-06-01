@@ -27,5 +27,5 @@ python3 subDomainFilter.py [-i/--input] <name_of_the_input_file> [-o/--output] <
 
 
 <br><br>
-<i>verbose conatining complete arguments and file dir :<i>
+<i>verbose containing complete arguments and file dir :<i>
 ![verbose conatining complete arguments and file dir](images/command-longest.jpg)
